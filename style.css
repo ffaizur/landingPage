@@ -1,0 +1,132 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* :root {
+    --text: 1rem;
+    --head: cal(1rem+vw);
+} */
+
+body {
+    font-family: 'Fasthand', cursive;
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url(pic.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+}
+
+.navebar {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: white;
+    animation: movedown 850ms ease-in 1s;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+}
+
+@keyframes movedown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.navebar ul {
+    list-style: none;
+}
+
+.navebar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+
+.navebar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navebar ul li a:hover {
+    border-bottom: solid 2px;
+}
+
+.hero-text {
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide 3s ease-in-out;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.hero-text::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    z-index: -1;
+    opacity: 0.6;
+}
+.hero-text a:hover {
+    background-color: rgb(255, 0, 0);
+    transition: .3s ease-in-out;
+    color: #fff;
+}
+
+.hero-text a {
+    color: white;
+    background-color: rgba(255, 255, 0, 0.653);
+    font-weight: 900;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    margin: 0.8rem auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.hero-text a:active{
+    transform: scale(0.5);
+}
+.hero-text h2 {
+    font-size: 3rem
+}
+
+.hero-text p {
+    font-size: var(--head);
+}
+#bw{
+    border-bottom: dashed 2px;
+    margin-bottom: 25px;
+}
+
+#bw:hover{
+    border-bottom: solid 2px;
+    margin-bottom: 25px;
+}
